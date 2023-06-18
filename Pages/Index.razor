@@ -12,7 +12,7 @@
         </div>
         <div class="col"></div>
         <div class="col">
-            <img src="@SpicinessImage(pizza.Picantes)"
+            <img src="@PicanteImagenes(pizza.Picantes)"
                 alt="@pizza.Picantes" />
         </div>
         <div class="col">
@@ -74,8 +74,9 @@
     Estado.Menu.Add(
     new Pizza(3, "Diabolo", 9.99M, Picantes.MuyPicante));
   }
-  private string SpicinessImage(Picantes picantes)
- => $"images/{picantes.ToString().ToLower()}.png";
+  private string PicanteImagenes(Picantes picantes) 
+  => $"Fotos/{picantes.ToString().ToLower()}.png";
+
  private void AddCesta(Pizza pizza)
  => Estado.Canasta.Add(pizza.PizzaId);
  private void RemoverDeLaCanasta(int pos)
